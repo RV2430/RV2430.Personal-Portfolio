@@ -1,660 +1,749 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudra Vashi | Data Analyst & ICT Master's Candidate</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        teal: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            200: '#99f6e4',
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a',
-                            950: '#042f2e',
-                        },
-                        slate: {
-                            850: '#151e29', // Custom deep slate for dark mode
-                        }
-                    }
-                }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rudra Vashi — Data Analyst & ICT Engineer</title>
+
+  <!-- Primary Meta -->
+  <meta name="description" content="Portfolio of Rudra Vashi — Data Analyst & ICT Master's candidate in Adelaide. Case studies in analytics, BI dashboards, and cloud solutions on AWS." />
+  <link rel="canonical" href="https://rv2430.github.io/RV2430.Personal-Portfolio/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Rudra Vashi — Data Analyst & ICT Engineer" />
+  <meta property="og:description" content="Case studies in analytics, BI dashboards, and cloud infrastructure." />
+  <meta property="og:url" content="https://rv2430.github.io/RV2430.Personal-Portfolio/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="RudraVashi.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Outfit', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50:  '#ecfeff',
+              100: '#cffafe',
+              200: '#a5f3fc',
+              300: '#67e8f9',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              800: '#155e75',
+              900: '#164e63'
             }
+          },
+          boxShadow: {
+            glow: '0 10px 30px -10px rgba(6,182,212,.35)'
+          }
         }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
-        
-        :root {
-            color-scheme: light dark;
-        }
-        body {
-            font-family: 'Outfit', sans-serif; /* Swapped Inter for Outfit - cleaner, more modern for tech */
-            transition: background-color 0.4s ease, color 0.4s ease;
-        }
-        
-        /* New Gradient: Teal to Cyan to Blue */
-        .gradient-text {
-            background-image: linear-gradient(135deg, #0d9488 0%, #0ea5e9 50%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .section-header {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            letter-spacing: -0.02em;
-        }
-        
-        .section-header::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #0d9488; /* Teal underline */
-            margin: 12px auto 0;
-            border-radius: 2px;
-        }
-        
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.15), 0 8px 10px -6px rgba(13, 148, 136, 0.1);
-            border-color: #2dd4bf; /* Teal-400 */
-        }
+      }
+    }
+  </script>
 
-        /* Timeline Styles */
-        .timeline-line {
-            border-left: 2px solid #e2e8f0;
-        }
-        html.dark .timeline-line {
-            border-left-color: #334155;
-        }
-        
-        .timeline-dot {
-            position: absolute;
-            left: -9px; /* Center on the 2px line */
-            top: 6px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: #fff;
-            border: 4px solid #0d9488; /* Teal border */
-            transition: all 0.3s ease;
-        }
-        html.dark .timeline-dot {
-            background-color: #0f172a;
-            border-color: #2dd4bf;
-        }
-        
-        .timeline-item:hover .timeline-dot {
-            background-color: #0d9488;
-            box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.2);
-        }
+  <style>
+    :root { color-scheme: light dark }
+    body { font-family: 'Outfit', sans-serif; }
+    /* Animated gradient backdrop in hero */
+    .hero-gradient::before {
+      content: '';
+      position: absolute; inset: -20% -10%;
+      background: conic-gradient(from 180deg at 50% 50%, #06b6d4, #6366f1, #10b981, #06b6d4);
+      filter: blur(80px); opacity: .25; transform: translateZ(0);
+      animation: spin 18s linear infinite;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-gradient::before { animation: none }
+      .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg) scale(1.1) }
+      100% { transform: rotate(360deg) scale(1.1) }
+    }
+    /* Reveal animation */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0) }
+    /* Focus rings */
+    :focus-visible { outline: 3px solid #06b6d4; outline-offset: 2px }
+    /* Chips */
+    .chip{padding:.5rem .8rem;border-radius:.7rem;border:1px solid var(--tw-prose-borders,#e2e8f0);background:rgba(255,255,255,.6)}
+    .dark .chip{background:rgba(2,6,23,.6);border-color:#334155}
+  </style>
 
-        /* Dark Mode Overrides */
-        html.dark body {
-            background-color: #0f172a; /* Slate-900 */
-            color: #e2e8f0;
-        }
-
-        /* Form styling adjustments */
-        input:focus, textarea:focus {
-            --tw-ring-opacity: 1;
-            --tw-ring-color: #0d9488; /* Teal-600 */
-            border-color: #0d9488;
-        }
-    </style>
+  <!-- Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Rudra Vashi",
+    "image":"https://rv2430.github.io/RV2430.Personal-Portfolio/RudraVashi.jpeg",
+    "jobTitle":"Data Analyst & ICT Specialist",
+    "address":{"@type":"PostalAddress","addressLocality":"Adelaide","addressCountry":"AU"},
+    "email":"mailto:vashirudra8@gmail.com",
+    "url":"https://rv2430.github.io/RV2430.Personal-Portfolio/",
+    "sameAs":[
+      "https://github.com/RV2430",
+      "https://www.linkedin.com/in/rudra-v-9a6237222"
+    ]
+  }
+  </script>
 </head>
-<body class="bg-gray-50 text-slate-800">
 
-    <!-- Header -->
-    <header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 dark:border-slate-800 transition-colors duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
-            <a href="#home" class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white group">
-                Rudra<span class="text-teal-600 dark:text-teal-400"> Vashi</span>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only absolute top-2 left-2 bg-brand-600 text-white px-3 py-2 rounded-md">Skip to content</a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/75 dark:bg-slate-950/70 border-b border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-tight">Rudra<span class="text-brand-600"> Vashi</span></a>
+
+      <nav aria-label="Primary" class="hidden md:flex items-center gap-8 text-sm">
+        <a class="hover:text-brand-600" href="#about">About</a>
+        <a class="hover:text-brand-600" href="#skills">Skills</a>
+        <a class="hover:text-brand-600" href="#projects">Projects</a>
+        <a class="hover:text-brand-600" href="#experience">Experience</a>
+        <a class="hover:text-brand-600" href="#contact">Contact</a>
+        <div class="pl-6 ml-2 border-l border-slate-200 dark:border-slate-700 flex items-center gap-3">
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle theme">
+            <svg class="dark:hidden w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79-1.79-1.8-1.8-1.79 1.8 1.8 1.79zM20 13h3v-2h-3v2zM17.24 4.84l1.8-1.79 1.41 1.41-1.8 1.79-1.41-1.41zM12 4a8 8 0 100 16 8 8 0 000-16z"/></svg>
+            <svg class="hidden dark:block w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.742 13.045A8 8 0 1111 3.258a9 9 0 109.742 9.787z"/></svg>
+          </button>
+          <a href="#contact" class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-md hover:bg-brand-700 shadow-glow">Let’s talk</a>
+        </div>
+      </nav>
+
+      <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800">
+      <nav class="px-6 py-4 space-y-2" aria-label="Mobile">
+        <a class="block py-2" href="#about">About</a>
+        <a class="block py-2" href="#skills">Skills</a>
+        <a class="block py-2" href="#projects">Projects</a>
+        <a class="block py-2" href="#experience">Experience</a>
+        <a class="block py-2" href="#contact">Contact</a>
+        <a class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-md hover:bg-brand-700" href="#contact">Let’s talk</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative hero-gradient overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6 pt-16 pb-24 lg:pt-24 lg:pb-36 relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal in">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 dark:bg-slate-800 dark:text-brand-200 border border-brand-200/60 dark:border-slate-700 text-xs font-semibold">
+            <span class="relative flex h-2 w-2">
+              <span class="absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75 animate-ping"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
+            </span>
+            Adelaide, Australia
+          </div>
+
+          <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+            I turn <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-sky-500 to-indigo-500">data</span> into decisions & scalable systems.
+          </h1>
+
+          <p class="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-xl">
+            Data Analyst & ICT specialist blending predictive analytics with AWS‑based infrastructure. I build end‑to‑end insights: ingestion → modeling → visualization → operationalization.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 shadow-glow">View case studies</a>
+            <a href="https://raw.githubusercontent.com/RV2430/RV2430.Personal-Portfolio/main/Rudra_Vashi_Resume.pdf" target="_blank" class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Download résumé</a>
+          </div>
+        </div>
+
+        <div class="reveal lg:justify-self-end">
+          <div class="relative">
+            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-500/20 via-cyan-400/10 to-indigo-500/10 blur-2xl"></div>
+            <img src="RV.png" alt="Portrait of Rudra Vashi" loading="eager" width="384" height="384"
+                 class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-[2rem] shadow-2xl border-4 border-white dark:border-slate-900"/>
+            <div class="absolute -bottom-4 -left-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 grid place-items-center">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v3H4zM4 10h16v9H4z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Specialization</p>
+                  <p class="text-sm font-semibold">Analytics & BI</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- About -->
+    <section id="about" class="py-20">
+      <div class="mx-auto max-w-5xl px-6">
+        <h2 class="text-3xl font-extrabold text-center">About</h2>
+        <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 text-center max-w-3xl mx-auto reveal">
+          I’m a data‑driven builder: I love turning ambiguous business problems into measurable outcomes. Recent work spans
+          <strong>attrition modeling</strong>, <strong>interactive BI</strong>, and <strong>AWS IaC</strong> with Terraform.
+        </p>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-6 reveal">
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+            <p class="text-sm text-slate-500">Core strengths</p>
+            <ul class="mt-2 space-y-2">
+              <li>Exploratory data analysis & feature engineering</li>
+              <li>Story‑driven dashboards (Power BI / Tableau)</li>
+              <li>Cloud‑ready pipelines & automation</li>
+            </ul>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+            <p class="text-sm text-slate-500">How I work</p>
+            <ul class="mt-2 space-y-2">
+              <li>Speak in outcomes, not tools</li>
+              <li>Version everything; document decisions</li>
+              <li>Bias to ship iteratively</li>
+            </ul>
+          </div>
+          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+            <p class="text-sm text-slate-500">Currently</p>
+            <ul class="mt-2 space-y-2">
+              <li>M.ICT candidate, University of Sunshine Coast</li>
+              <li>Seeking Data/ICT roles in Adelaide</li>
+              <li>Open to remote collaboration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-950/50">
+      <div class="mx-auto max-w-7xl px-6">
+        <h2 class="text-3xl font-extrabold text-center">Tools & Technologies</h2>
+
+        <div class="mt-10 grid lg:grid-cols-3 gap-8">
+          <div class="reveal">
+            <h3 class="font-semibold text-lg flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-500"></span> Data & Languages
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Python</span>
+              <span class="chip">Pandas</span>
+              <span class="chip">NumPy</span>
+              <span class="chip">scikit‑learn</span>
+              <span class="chip">SQL (MySQL)</span>
+              <span class="chip">PHP</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h3 class="font-semibold text-lg flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-500"></span> Cloud & DevOps
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">AWS (ECS, EC2, S3)</span>
+              <span class="chip">Terraform (IaC)</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Git & GitHub</span>
+              <span class="chip">GitLab</span>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h3 class="font-semibold text-lg flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-brand-500"></span> BI & Visualization
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="chip">Power BI</span>
+              <span class="chip">Tableau</span>
+              <span class="chip">Excel (Advanced)</span>
+              <span class="chip">EDA & Storytelling</span>
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications (with logo placeholders) -->
+<div class="mt-12 grid sm:grid-cols-3 gap-4">
+
+  <!-- Google: Foundation: Data, Data, Everywhere -->
+  <a href="https://in.coursera.org/account/accomplishments/verify/ANWQXR4ERS8D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+     target="_blank" rel="noopener"
+     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-sky-400 transition-colors reveal">
+    <div class="flex items-center gap-3">
+      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
+        <!-- 🔁 Replace src with your downloaded file path -->
+        <img src="g.jpeg" alt="Google logo" class="w-7 h-7 object-contain" loading="lazy">
+      </span>
+      <div class="text-sky-600 dark:text-sky-400 text-sm font-semibold">Google</div>
+    </div>
+    <h4 class="font-bold mt-3">Foundation: Data, Data, Everywhere</h4>
+    <p class="text-xs text-slate-500">Nov 2022</p>
+  </a>
+
+  <!-- Google: IT Security -->
+  <a href="https://in.coursera.org/account/accomplishments/verify/ANWQXR4ERS8D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+     target="_blank" rel="noopener"
+     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-sky-400 transition-colors reveal">
+    <div class="flex items-center gap-3">
+      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
+        <img src="g.jpeg" alt="Google logo" class="w-7 h-7 object-contain" loading="lazy">
+      </span>
+      <div class="text-sky-600 dark:text-sky-400 text-sm font-semibold">Google</div>
+    </div>
+    <h4 class="font-bold mt-3">IT Security: Defense Against the Digital Dark Arts</h4>
+    <p class="text-xs text-slate-500">Oct 2022</p>
+  </a>
+
+  <!-- Great Learning: Power BI -->
+  <a href="https://olympus.mygreatlearning.com/courses/30824/certificate"
+     target="_blank" rel="noopener"
+     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-yellow-400 transition-colors reveal">
+    <div class="flex items-center gap-3">
+      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
+        <img src="GL.png" alt="Great Learning logo" class="w-7 h-7 object-contain" loading="lazy">
+      </span>
+      <div class="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">Great Learning</div>
+    </div>
+    <h4 class="font-bold mt-3">Data Visualisation with Power BI</h4>
+    <p class="text-xs text-slate-500">Jul 2023</p>
+  </a>
+
+  <!-- AWS: Academy Cloud Foundations -->
+  <a href="https://www.credly.com/badges/eda6b6a2-9c4d-41e4-ae3b-27fa9fab34e6/linked_in_profile"
+     target="_blank" rel="noopener"
+     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-amber-400 transition-colors reveal">
+    <div class="flex items-center gap-3">
+      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
+        <img src="aws-color.png" alt="Amazon Web Services logo" class="w-7 h-7 object-contain" loading="lazy">
+      </span>
+      <div class="text-amber-600 dark:text-amber-400 text-sm font-semibold">Amazon Web Services</div>
+    </div>
+    <h4 class="font-bold mt-3">AWS Academy Graduate — Cloud Foundations</h4>
+    <p class="text-xs text-slate-500">Sep 2023</p>
+  </a>
+
+  <!-- AWS: Cloud Technical Essentials -->
+  <a href="https://www.coursera.org/account/accomplishments/records/UQBKVYR5FJJH"
+     target="_blank" rel="noopener"
+     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-amber-400 transition-colors reveal">
+    <div class="flex items-center gap-3">
+      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
+        <img src="aws-color.png" alt="Amazon Web Services logo" class="w-7 h-7 object-contain" loading="lazy">
+      </span>
+      <div class="text-amber-600 dark:text-amber-400 text-sm font-semibold">Amazon Web Services</div>
+    </div>
+    <h4 class="font-bold mt-3">AWS Cloud Technical Essentials</h4>
+    <p class="text-xs text-slate-500">Aug 2024</p>
+  </a>
+
+  <!-- Pearson: IT Specialist — Python -->
+  <a href="https://www.credly.com/badges/e5ba3d91-5346-4070-b57d-519c839c9712/linked_in_profile"
+     target="_blank" rel="noopener"
+     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 transition-colors reveal">
+    <div class="flex items-center gap-3">
+      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
+        <img src="pearson-logo-0.png" alt="Pearson logo" class="w-7 h-7 object-contain" loading="lazy">
+      </span>
+      <div class="text-emerald-600 dark:text-emerald-400 text-sm font-semibold">Pearson</div>
+    </div>
+    <h4 class="font-bold mt-3">IT Specialist — Python</h4>
+    <p class="text-xs text-slate-500">Feb 2026</p>
+  </a>
+
+</div>
+    <!-- Projects -->
+<section id="projects" class="py-20">
+  <div class="mx-auto max-w-7xl px-6">
+    <h2 class="text-3xl font-extrabold text-center">Featured Projects</h2>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+
+      <!-- 1) Employee Attrition Model (Repo only) -->
+      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
+        <div class="h-44 bg-gradient-to-r from-brand-600 to-emerald-500 grid place-items-center text-white">
+          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+          </svg>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold group-hover:text-brand-600 transition-colors">Employee Attrition Model</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            Predicted churn risk and surfaced drivers for HR using scikit‑learn and SHAP‑style interpretability.
+          </p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400">
+            <li><strong>Problem:</strong> High replacement costs and unmanaged attrition.</li>
+            <li><strong>Approach:</strong> EDA → feature selection → model tuning → explainability.</li>
+            <li><strong>Impact:</strong> Identified top levers; informed retention strategy.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Python</span><span class="chip">scikit‑learn</span><span class="chip">EDA</span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://github.com/RV2430/-Employee-Attrition-Workforce" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+              View repo
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
+              </svg>
             </a>
-            
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600 dark:text-slate-400">
-                <a href="#about" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">About</a>
-                <a href="#services" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Services</a>
-                <a href="#skills" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">Projects</a>
-                
-                <div class="flex items-center space-x-4 ml-4 border-l border-gray-200 dark:border-slate-700 pl-4">
-                    <button id="theme-toggle" class="text-slate-500 hover:text-teal-600 dark:text-slate-400 dark:hover:text-teal-400 transition-colors">
-                        <i class="fas fa-moon hidden dark:block"></i>
-                        <i class="fas fa-sun block dark:hidden"></i>
-                    </button>
-                    <!-- Link changed to #contact for smooth scroll -->
-                    <a href="#contact" class="bg-teal-600 text-white px-5 py-2.5 rounded-lg hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/20 text-sm font-semibold">
-                        Let's Connect
-                    </a>
-                </div>
-            </nav>
-
-            <!-- Mobile Toggle -->
-            <button id="mobile-menu-btn" class="md:hidden text-slate-600 dark:text-slate-300">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
+          </div>
         </div>
+      </article>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 absolute w-full left-0 top-full p-4 shadow-xl">
-            <div class="flex flex-col space-y-4 text-center">
-                <a href="#about" class="text-slate-600 dark:text-slate-300 py-2">About</a>
-                <a href="#services" class="text-slate-600 dark:text-slate-300 py-2">Services</a>
-                <a href="#skills" class="text-slate-600 dark:text-slate-300 py-2">Skills</a>
-                <a href="#projects" class="text-slate-600 dark:text-slate-300 py-2">Projects</a>
-                <a href="#contact" class="text-teal-600 font-semibold py-2">Contact</a>
-            </div>
+      <!-- 2) Power BI Sales Dashboard (Repo only) -->
+      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
+        <div class="h-44 bg-gradient-to-r from-amber-400 to-orange-500 grid place-items-center text-white">
+          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+          </svg>
         </div>
-    </header>
+        <div class="p-6">
+          <h3 class="text-xl font-bold group-hover:text-amber-600 transition-colors">Power BI Sales Dashboard</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            Executive dashboard with dynamic filtering, funnel metrics, and region‑level performance tracking.
+          </p>
+          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400">
+            <li><strong>Problem:</strong> Fragmented reporting → slow decisions.</li>
+            <li><strong>Approach:</strong> Data model + DAX + design system.</li>
+            <li><strong>Impact:</strong> Faster KPI reviews; improved regional focus.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Data Viz</span>
+          </div>
 
-    <!-- Hero Section -->
-    <!-- Added ID "about" to this section so the Nav link works -->
-    <section id="about" class="pt-20 pb-32 px-6 bg-gradient-to-b from-teal-50/50 to-white dark:from-slate-900 dark:to-slate-950">
-        <div class="container mx-auto max-w-7xl">
-            <div class="flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-20">
-                
-                <!-- Text -->
-                <div class="md:w-1/2 text-center md:text-left space-y-6">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100/50 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 text-sm font-semibold border border-teal-200 dark:border-teal-800">
-                        <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
-                        </span>
-                        Based in Adelaide, Australia
-                    </div>
-                    
-                    <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white leading-[1.1]">
-                        Transforming Data into <br>
-                        <span class="gradient-text">Business Impact.</span>
-                    </h1>
-                    
-                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                        I am a <strong>Data Analyst & ICT Specialist</strong> blending advanced predictive modeling with cloud infrastructure to build scalable, intelligent solutions.I create scalable, data-driven solutions that combine analytics with modern infrastructure.
-                    </p>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-                        <a href="#projects" class="px-8 py-3.5 rounded-xl bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/25 hover:-translate-y-1">
-                            View Case Studies
-                        </a>
-                        <!-- Link changed to #contact for smooth scroll to the new form -->
-                        <a href="#contact" class="px-8 py-3.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-white font-semibold border border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all hover:-translate-y-1">
-                            Contact Me
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Image -->
-                <div class="md:w-1/2 relative">
-                    <div class="absolute inset-0 bg-teal-500 blur-[100px] opacity-20 rounded-full"></div>
-                    <img 
-                        src="RudraVashi.jpeg" 
-                        alt="Rudra Vashi" 
-                        class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-[2rem] rotate-3 shadow-2xl border-4 border-white dark:border-slate-800 mx-auto z-10 hover:rotate-0 transition-all duration-500"
-                    >
-                    <!-- Decorative floating card -->
-                    <div class="absolute -bottom-6 -left-4 md:left-10 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-slate-700 z-20 animate-bounce" style="animation-duration: 3s;">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-teal-100 dark:bg-teal-900/50 rounded-lg flex items-center justify-center text-teal-600 dark:text-teal-400">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Specialization</p>
-                                <p class="text-sm font-bold text-slate-800 dark:text-white">Data Analytics</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <!-- CTAs -->
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://github.com/RV2430/PowerBI-Sales-Dashboard" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+              View repo
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Services Section -->
-    <section id="services" class="py-24 bg-white dark:bg-slate-900">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <h2 class="section-header text-slate-900 dark:text-white">Technical Expertise</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="group p-8 rounded-2xl bg-gray-50 dark:bg-slate-850 border border-gray-100 dark:border-slate-800 hover:border-teal-500 dark:hover:border-teal-500 transition-all duration-300 hover:shadow-xl dark:hover:shadow-teal-900/10">
-                    <div class="w-14 h-14 rounded-xl bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Data Analytics & BI</h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Transforming raw datasets into interactive <strong>Power BI</strong> and <strong>Tableau</strong> dashboards. I specialize in SQL optimization and predictive modeling using Python.
-                    </p>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="group p-8 rounded-2xl bg-gray-50 dark:bg-slate-850 border border-gray-100 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl dark:hover:shadow-blue-900/10">
-                    <div class="w-14 h-14 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Cloud Infrastructure</h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Designing scalable cloud architectures on <strong>AWS</strong>. Experienced with ECS, S3, and using <strong>Terraform</strong> for Infrastructure as Code (IaC) deployments.
-                    </p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="group p-8 rounded-2xl bg-gray-50 dark:bg-slate-850 border border-gray-100 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 transition-all duration-300 hover:shadow-xl dark:hover:shadow-amber-900/10">
-                    <div class="w-14 h-14 rounded-xl bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Business Process Optimization</h3>
-                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Streamlining workflows through <strong>ERP systems</strong> and automated tools to reduce redundancy and improve operational efficiency for SMEs.
-                    </p>
-                </div>
-            </div>
+      <!-- 3) Inventory Management System (Repo + Live) -->
+      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
+        <div class="h-44 bg-gradient-to-r from-indigo-500 to-purple-600 grid place-items-center text-white">
+          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+          </svg>
         </div>
-    </section>
+        <div class="p-6">
+          <h3 class="text-xl font-bold group-hover:text-indigo-600 transition-colors">Inventory Management System</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            Lightweight web app for stock control with low‑stock alerts, vendor tracking, and CSV reports.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          </div>
 
-    <!-- Skills Section (Pills Layout) -->
-    <section id="skills" class="py-24 bg-slate-50 dark:bg-slate-950">
-        <div class="container mx-auto px-6 max-w-7xl">
-            <h2 class="section-header text-slate-900 dark:text-white">Tools & Technologies</h2>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Tech Stack -->
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                            <i class="fas fa-code text-teal-500"></i> Languages & Scripting
-                        </h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Python</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">SQL (MySQL)</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">HTML5 / Tailwind CSS</span>
-                        </div>
-                    </div>
+          <!-- CTAs -->
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://rv2430.github.io/IMS/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 shadow-glow">
+              Live demo
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
+              </svg>
+            </a>
 
-                    <div>
-                        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                            <i class="fas fa-layer-group text-blue-500"></i> Cloud & DevOps
-                        </h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">AWS (ECS, EC2, S3)</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Terraform</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Git & GitHub</span>
-                        </div>
-                    </div>
-
-                     <div>
-                        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                            <i class="fas fa-chart-bar text-amber-500"></i> Analysis & Visualization
-                        </h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Power BI</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Tableau</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Pandas & NumPy</span>
-                            <span class="px-4 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-medium text-sm shadow-sm">Excel (Advanced)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certifications (Card Style) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <a href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" class="block p-5 rounded-xl bg-white dark:bg-slate-850 border border-gray-100 dark:border-slate-800 hover:border-orange-400 dark:hover:border-orange-400 transition-colors shadow-sm">
-                        <i class="fab fa-aws text-3xl text-orange-500 mb-3"></i>
-                        <h4 class="font-bold text-slate-900 dark:text-white">AWS Cloud Technical Essentials</h4>
-                        <p class="text-xs text-slate-500 mt-1">Amazon Web Services</p>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" class="block p-5 rounded-xl bg-white dark:bg-slate-850 border border-gray-100 dark:border-slate-800 hover:border-yellow-400 dark:hover:border-yellow-400 transition-colors shadow-sm">
-                        <i class="fas fa-chart-line text-3xl text-yellow-500 mb-3"></i>
-                        <h4 class="font-bold text-slate-900 dark:text-white">Power BI Data Visualization</h4>
-                        <p class="text-xs text-slate-500 mt-1">Great Learning</p>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" class="block p-5 rounded-xl bg-white dark:bg-slate-850 border border-gray-100 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-400 transition-colors shadow-sm">
-                        <i class="fab fa-google text-3xl text-blue-500 mb-3"></i>
-                        <h4 class="font-bold text-slate-900 dark:text-white">Google Data Analytics</h4>
-                        <p class="text-xs text-slate-500 mt-1">Foundations Certificate</p>
-                    </a>
-                </div>
-            </div>
+            <a href="https://github.com/RV2430/IMS" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+              View repo
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-    </section>
+      </article>
 
-    <!-- Experience Timeline -->
-    <section id="experience" class="py-24 bg-white dark:bg-slate-900">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="section-header text-slate-900 dark:text-white">Journey So Far</h2>
-            
-            <div class="relative pl-8 space-y-12">
-                <div class="absolute left-0 top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-slate-700"></div>
-
-                <!-- Item 1 -->
-                <div class="relative timeline-item">
-                    <div class="absolute -left-[39px] top-1.5 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900 bg-teal-500"></div>
-                    <div>
-                        <span class="text-sm font-bold tracking-wider text-teal-600 dark:text-teal-400 uppercase">November, 2025 - July, 2027</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Master of ICT (Candidate)</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">University of Sunshine Coast &middot; Adelaide, AU</p>
-                        <p class="text-slate-600 dark:text-slate-400">Specializing in Information and Communication Technology.</p>
-                    </div>
-                </div>
-                <!-- Item 2 -->
-                <div class="relative timeline-item">
-                    <div class="absolute -left-[39px] top-1.5 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900 bg-slate-400"></div>
-                    <div>
-                        <span class="text-sm font-bold tracking-wider text-slate-500 uppercase">April, 2025 - October, 2025</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">IT Associate</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">MedhSystems</p>
-                        <p class="text-slate-600 dark:text-slate-400">Supported IT infrastructure, software deployment, and resolved user queries. Documented IT workflows and provided assistance in ERP support tasks.</p>
-                    </div>
-                </div>
-                <!-- Item 3 - Date corrected and typo fixed -->
-                <div class="relative timeline-item">
-                    <div class="absolute -left-[39px] top-1.5 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900 bg-slate-400"></div>
-                    <div>
-                        <span class="text-sm font-bold tracking-wider text-slate-500 uppercase">March, 2024 - October, 2024</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">IT Associate Intern</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">MedhSystems</p>
-                        <p class="text-slate-600 dark:text-slate-400">Collaborated with the IT team on projects, enhancing team efficiency and communication. Demonstrated effective time management while maintaining a positive attitude.</p>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="relative timeline-item">
-                    <div class="absolute -left-[39px] top-1.5 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900 bg-slate-400"></div>
-                    <div>
-                        <span class="text-sm font-bold tracking-wider text-slate-500 uppercase">June, 2024 - September, 2024</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">ERP & Data Analytics Intern</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">Merciglobal Systems</p>
-                        <p class="text-slate-600 dark:text-slate-400">Developed HR & Sales dashboards using Power BI. Optimized SQL queries for reporting efficiency.</p>
-                    </div>
-                </div>
-
-                 <!-- Item 5 -->
-                <div class="relative timeline-item">
-                    <div class="absolute -left-[39px] top-1.5 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900 bg-slate-400"></div>
-                    <div>
-                        <span class="text-sm font-bold tracking-wider text-slate-500 uppercase">December, 2023 - June, 2024</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">AWS Cloud Intern</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">Logictrix Infotech</p>
-                        <p class="text-slate-600 dark:text-slate-400">Deployed containerized applications on ECS. Implemented infrastructure automation using Terraform.</p>
-                    </div>
-                </div>
-                <!-- Item 6 -->
-                <div class="relative timeline-item">
-                    <div class="absolute -left-[39px] top-1.5 h-6 w-6 rounded-full border-4 border-white dark:border-slate-900 bg-slate-400"></div>
-                    <div>
-                        <span class="text-sm font-bold tracking-wider text-slate-500 uppercase">July, 2020 - June, 2024</span>
-                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-1">Bachelors in Information Technology.</h3>
-                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-2">UKA TARSADIA UNIVERSITY</p>
-                        <p class="text-slate-600 dark:text-slate-400">Data Engineering/Analysis: Python (Pandas/NumPy/SciPy) and SQL proficiency for data cleaning and manipulation, showcased via Jupyter Notebooks and deployed to an interactive dashboard using Power BI/Tableau or a web app framework (like Plotly Dash), all sourcing data from a Cloud Data Warehouse/Storage (e.g., AWS S3/Azure Blob/GCP BigQuery).</p>
-                    </div>
-                </div>
-            </div>
+      <!-- 4) Personal Expense Tracker (Repo + Live) -->
+      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
+        <div class="h-44 bg-gradient-to-r from-cyan-500 to-blue-600 grid place-items-center text-white">
+          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+          </svg>
         </div>
-    </section>
+        <div class="p-6">
+          <h3 class="text-xl font-bold group-hover:text-cyan-600 transition-colors">Personal Expense Tracker</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">
+            Web-based tracker for logging expenses, categorizing spend, and visualizing insights.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">HTML</span><span class="chip">Tailwind</span><span class="chip">JavaScript</span><span class="chip">Chart.js</span>
+          </div>
 
+          <!-- CTAs -->
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://rv2430.github.io/" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-600 text-white font-semibold hover:bg-cyan-700 shadow-glow">
+              Live demo
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
+              </svg>
+            </a>
+
+            <a href="https://github.com/RV2430/RV2430.github.io" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
+              View repo
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+    <!-- Experience (SPLIT: Education on left, Work on right) -->
+<section id="experience" class="py-20 bg-slate-50 dark:bg-slate-950/50">
+  <div class="mx-auto max-w-7xl px-6">
+    <h2 class="text-3xl font-extrabold text-center">Journey so far</h2>
+
+    <div class="mt-12 grid lg:grid-cols-2 gap-10">
+      <!-- ===================== EDUCATION (LEFT) ===================== -->
+      <div class="lg:order-1">
+        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-brand-600"></span> Education
+        </h3>
+
+        <ol class="relative ml-3 border-l border-slate-200 dark:border-slate-800 space-y-10">
+          <!-- Master -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-brand-700 dark:text-brand-300 uppercase tracking-wide">Nov 2025 – Jul 2027</div>
+            <h4 class="text-lg font-bold mt-1">Master in Information &amp; Communication Technology (Candidate)</h4>
+            <p class="text-sm text-slate-500">University of Sunshine Coast · Adelaide, Australia</p>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              <strong>Specialization:</strong> Python/SQL, Data Visualisation, Machine Learning, Business Analytics
+            </p>
+          </li>
+
+          <!-- Bachelor -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Jun 2020 – Jul 2024</div>
+            <h4 class="text-lg font-bold mt-1">B.Tech in Information Technology</h4>
+            <p class="text-sm text-slate-500">UKA Tarsadia University · Bardoli, Gujarat</p>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              <strong>Specialization:</strong> Data Analysis, Cloud Technology, SQL &amp; Data Visualisation
+            </p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- ===================== WORK EXPERIENCE (RIGHT) ===================== -->
+      <div class="lg:order-2">
+        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span> Work Experience
+        </h3>
+
+        <ol class="relative ml-3 border-l border-slate-200 dark:border-slate-800 space-y-10">
+          <!-- IT Associate -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Apr 2025 – Oct 2025</div>
+            <h4 class="text-lg font-bold mt-1">IT Associate · MedhSystems</h4>
+            <p class="text-sm text-slate-500">Mumbai, Maharashtra</p>
+            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
+              <li>ERP assistance and documentation; improved efficiency and communication.</li>
+            </ul>
+            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> ERP Software</p>
+          </li>
+
+          <!-- IT Associate Intern -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Oct 2024 – Mar 2025</div>
+            <h4 class="text-lg font-bold mt-1">IT Associate Intern · Medh Systems</h4>
+            <p class="text-sm text-slate-500">Mumbai, Maharashtra</p>
+            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Collaborated with the IT team on projects, enhancing team efficiency and communication.</li>
+              <li>Demonstrated effective time management while maintaining a positive attitude.</li>
+            </ul>
+            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> ERP Software</p>
+          </li>
+
+          <!-- ERP & Data Analytics Intern -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Jun 2024 – Sep 2024</div>
+            <h4 class="text-lg font-bold mt-1">ERP &amp; Data Analytics Intern · Merciglobal Systems</h4>
+            <p class="text-sm text-slate-500">Surat, Gujarat</p>
+            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Built HR/Sales dashboards; developed ERP systems for clients across industries.</li>
+            </ul>
+            <p class="mt-1 text-sm text-slate-500">
+              <strong>Tools:</strong> PersivX, Vanilla JS, PHP, SQL, HTML, CSS
+            </p>
+          </li>
+
+          <!-- AWS Associate Intern -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Dec 2023 – May 2024</div>
+            <h4 class="text-lg font-bold mt-1">AWS Associate Intern · Logictrix Infotech</h4>
+            <p class="text-sm text-slate-500">Surat, Gujarat</p>
+            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Deployed container apps on Amazon ECS; automated infrastructure via Terraform.</li>
+            </ul>
+            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> AWS, GitLab, Terraform, Docker</p>
+          </li>
+
+          <!-- Web Developer Intern -->
+          <li class="reveal pl-6">
+            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">May 05, 2023 – Jun 09, 2023</div>
+            <h4 class="text-lg font-bold mt-1">Web Developer Intern · Toshal Infotech</h4>
+            <p class="text-sm text-slate-500">Surat, Gujarat</p>
+            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
+              <li>Created web‑based templates with responsive layouts and reusable components.</li>
+            </ul>
+            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> HTML, CSS, Bootstrap, JavaScript</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Contact -->
+<section id="contact" class="py-20">
+  <div class="mx-auto max-w-3xl px-6 text-center">
     
-<!-- Projects Section -->
-<section id="projects" class="py-24 bg-slate-50 dark:bg-slate-950">
-    <div class="container mx-auto px-6 max-w-7xl">
-        <h2 class="section-header text-slate-900 dark:text-white">Featured Projects</h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            
-            <!-- Project 1 -->
-            <div class="card-hover bg-white dark:bg-slate-850 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 group">
-                <div class="h-48 bg-gradient-to-r from-teal-500 to-emerald-500 flex items-center justify-center">
-                    <i class="fas fa-users-cog text-6xl text-white/90"></i>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-teal-600 transition-colors">Employee Attrition Model</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3">
-                        A machine learning solution to predict employee turnover. Used Python (Scikit-Learn) to identify key attrition drivers and visualization tools to present findings to HR stakeholders.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 text-xs font-semibold rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 text-xs font-semibold rounded-full">ML</span>
-                        <span class="px-3 py-1 bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 text-xs font-semibold rounded-full">EDA</span>
-                    </div>
-                    <a href="https://github.com/RV2430/-Employee-Attrition-Workforce" class="inline-flex items-center text-teal-600 font-semibold hover:gap-2 transition-all">
-                        View Analysis <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </div>
+    <h2 class="text-3xl font-extrabold">Get in touch</h2>
+    <p class="mt-4 text-slate-600 dark:text-slate-300">
+      Reach out anytime — I’d love to connect!
+    </p>
 
-            <!-- Project 2 -->
-            <div class="card-hover bg-white dark:bg-slate-850 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 group">
-                <div class="h-48 bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-center">
-                    <i class="fas fa-chart-line text-6xl text-white/90"></i>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-amber-600 transition-colors">Power BI Sales Dashboard</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3">
-                        Interactive dashboard tracking regional revenue and sales funnel performance. Features dynamic filtering and real-time KPI updates for executive decision-making.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 text-xs font-semibold rounded-full">Power BI</span>
-                        <span class="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 text-xs font-semibold rounded-full">DAX</span>
-                        <span class="px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 text-xs font-semibold rounded-full">Data Viz</span>
-                    </div>
-                    <a href="https://github.com/RV2430/PowerBI-Sales-Dashboard" class="inline-flex items-center text-amber-600 font-semiboldion-all">
-                        View Dashboard <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </div>
+    <div class="mt-10 grid sm:grid-cols-3 gap-6">
 
-            <!-- Project 3 -->
-            <div class="card-hover bg-white dark:bg-slate-850 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 group">
-                <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center">
-                    <i class="fas fa-boxes text-6xl text-white/90"></i>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 transition-colors">Inventory Management System</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3">
-                        A web-based solution for efficient stock control, low-stock alerts, usage tracking, vendor management, and CSV reporting.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold rounded-full">HTML</span>
-                        <span class="px-3 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold rounded-full">CSS</span>
-                        <span class="px-3 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-xs font-semibold rounded-full">JavaScript</span>
-                    </div>
-                    <a href="https://github.com/RV2430/IMS" class="inline-flex items-center text-indigo-600 font-semibold hover:gap-2 transition-all">
-                        View Project <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </div>
-            <!-- Project 4: Personal Expense Tracker -->
-            <div class="card-hover bg-white dark:bg-slate-850 rounded-2xl overflow-hidden border border-gray-100 dark:border-slate-800 group">
-                <div class="h-48 bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
-                    <i class="fas fa-wallet text-6xl text-white/90"></i>
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-cyan-600 transition-colors">Personal Expense Tracker</h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3">
-                        A Streamlit-based web app to track daily expenses, visualize spending patterns, and export reports. Built with Python and Pandas for data handling.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-cyan-50 dark:bg-cyan-900/20 text-cyan-700 dark:text-cyan-300 text-xs font-semibold rounded-full">Python</span>
-                        <span class="px-3 py-1 bg-cyan-50 dark:bg-cyan-900/20 text-cyan-700 dark:text-cyan-300 text-xs font-semibold rounded-full">Streamlit</span>
-                        <span class="px-3 py-1 bg-cyan-50 dark:bg-cyan-900/20 text-cyan-700 dark:text-cyan-300 text-xs font-semibold rounded-full">Pandas</span>
-                    </div>
-                    <a href="https://github.com/RV2430/Personal-Expense-Tracker" class="inline-flex items-center text-cyan-600 font transition-all">
-                        View App <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </div>
-
+      <!-- Email -->
+      <a href="mailto:vashirudra8@gmail.com"
+         class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-brand-500 transition-all shadow-sm hover:shadow-lg">
+        <div class="text-brand-600 dark:text-brand-400 text-3xl mb-3">
+          📧
         </div>
-    </div>
-</section>
+        <h3 class="font-bold text-lg">Email</h3>
+        <p class="text-sm text-slate-500 mt-1">vashirudra8@gmail.com</p>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/rudra-v-9a6237222"
+         target="_blank"
+         class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-sky-500 transition-all shadow-sm hover:shadow-lg">
+        <div class="text-sky-600 dark:text-sky-400 text-3xl mb-3">
+          🔗
         </div>
+        <h3 class="font-bold text-lg">LinkedIn</h3>
+        <p class="text-sm text-slate-500 mt-1">Message me directly</p>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/RV2430"
+         target="_blank"
+         class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-500 transition-all shadow-sm hover:shadow-lg">
+        <div class="text-indigo-600 dark:text-indigo-400 text-3xl mb-3">
+          🧩
+        </div>
+        <h3 class="font-bold text-lg">GitHub</h3>
+        <p class="text-sm text-slate-500 mt-1">View my projects</p>
+      </a>
+
     </div>
+
+  </div>
 </section>
 
-    <!-- Contact Form Section (Replaced Contact CTA) -->
-    <section id="contact" class="py-24 bg-white dark:bg-slate-900">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="section-header text-slate-900 dark:text-white">Get In Touch</h2>
-            
-            <div class="bg-slate-50 dark:bg-slate-950 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 dark:border-slate-800">
-                <p class="text-center text-slate-600 dark:text-slate-400 mb-8">
-                    I am actively looking for Data Analyst and ICT roles in Adelaide, Australia. Let's start a conversation!
-                </p>
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-10">
+    <div class="mx-auto max-w-7xl px-6 text-center text-sm text-slate-500">
+      <div class="flex items-center justify-center gap-5 mb-4">
+        <a aria-label="GitHub" href="https://github.com/RV2430" target="_blank" class="hover:text-brand-600">GitHub</a>
+        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" class="hover:text-brand-600">LinkedIn</a>
+        <a aria-label="Email" href="mailto:vashirudra8@gmail.com" class="hover:text-brand-600">Email</a>
+      </div>
+      <p>© <span id="year"></span> Rudra Vashi • Built with Tailwind</p>
+    </div>
+  </footer>
 
-                <form id="contactForm" class="space-y-6">
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-600 focus:border-teal-600 transition-colors"
-                                placeholder="Your Name">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-600 focus:border-teal-600 transition-colors"
-                                placeholder="name@example.com">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label for="subject" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Subject</label>
-                        <input type="text" id="subject" name="subject" required
-                            class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-600 focus:border-teal-600 transition-colors"
-                            placeholder="Regarding a potential opportunity...">
-                    </div>
-
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Your Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                            class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-teal-600 focus:border-teal-600 transition-colors"
-                            placeholder="Type your message here..."></textarea>
-                    </div>
-
-                    <button type="submit" id="submitButton"
-                        class="w-full px-6 py-3.5 rounded-xl bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/30 disabled:bg-gray-400 disabled:shadow-none">
-                        <i class="fas fa-paper-plane mr-2"></i> Send Message
-                    </button>
-                    
-                    <!-- Feedback Message Container -->
-                    <div id="formMessage" class="mt-4 p-4 rounded-xl text-center hidden"></div>
-                </form>
-
-            </div>
-            
-            <div class="text-center mt-8 text-sm text-slate-500 dark:text-slate-400">
-                <p>Alternatively, you can email me directly at: 
-                    <a href="mailto:vashirudra8@gmail.com" class="text-teal-600 dark:text-teal-400 hover:underline">vashirudra8@gmail.com</a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-950 border-t border-gray-100 dark:border-slate-900 py-10">
-        <div class="container mx-auto text-center text-slate-500 text-sm">
-            <p>&copy; 2025 Rudra Vashi. Built with <span class="text-teal-500">Tailwind CSS</span>.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Dark Mode Logic
-        const themeToggle = document.getElementById('theme-toggle');
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        // Check system preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
+  <!-- Scripts: theme, menu, reveal, form -->
+  <script>
+    // Theme
+    const themeBtn = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const setTheme = (force) => {
+      if (force) {
+        document.documentElement.classList.toggle('dark', force === 'dark');
+        localStorage.theme = force;
+      } else {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && prefersDark.matches)) {
+          document.documentElement.classList.add('dark');
         } else {
-            document.documentElement.classList.remove('dark');
+          document.documentElement.classList.remove('dark');
         }
+      }
+    };
+    setTheme();
+    themeBtn?.addEventListener('click', () => {
+      const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+      setTheme(next);
+    });
 
-        themeToggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.theme = 'dark';
-            } else {
-                localStorage.theme = 'light';
-            }
-        });
+    // Mobile menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { mobileMenu?.classList.add('hidden'); menuBtn?.setAttribute('aria-expanded','false'); }
+    });
 
-        // Mobile Menu
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-        // Contact Form Logic
-        const form = document.getElementById('contactForm');
-        const submitButton = document.getElementById('submitButton');
-        const formMessage = document.getElementById('formMessage');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Disable button and show loading state
-            submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
-            formMessage.classList.add('hidden');
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Construct the mailto link content
-            const recipient = 'vashirudra8@gmail.com';
-            const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
-            
-            // Simulation: Attempt to open the mailto link
-            try {
-                window.location.href = mailtoLink;
-
-                // Provide success feedback after a short delay
-                setTimeout(() => {
-                    formMessage.textContent = 'Success! Your email client should open shortly to confirm the message.';
-                    formMessage.className = 'mt-4 p-4 rounded-xl text-center text-green-800 bg-green-100 dark:bg-green-900/50 dark:text-green-300';
-                    formMessage.classList.remove('hidden');
-                    form.reset(); // Clear the form
-                    
-                    // Re-enable the button
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Send Message';
-                }, 500);
-
-            } catch (error) {
-                // In case the browser completely rejects mailto
-                formMessage.textContent = 'Error: Could not open mail client. Please contact me directly at vashirudra8@gmail.com';
-                formMessage.className = 'mt-4 p-4 rounded-xl text-center text-red-800 bg-red-100 dark:bg-red-900/50 dark:text-red-300';
-                formMessage.classList.remove('hidden');
-
-                // Re-enable the button
-                submitButton.disabled = false;
-                submitButton.innerHTML = '<i class="fas fa-paper-plane mr-2"></i> Send Message';
-            }
-        });
-    </script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
