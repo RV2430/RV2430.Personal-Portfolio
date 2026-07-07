@@ -1,749 +1,516 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rudra Vashi — Data Analyst & ICT Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rudra Vashi — Data Analyst &amp; ICT Engineer</title>
+  <meta name="description" content="Portfolio of Rudra Vashi — Data Analyst & ICT Master's candidate in Adelaide. Case studies in analytics, BI dashboards, and cloud infrastructure on AWS." />
+  <meta name="author" content="Rudra Vashi" />
+  <meta name="theme-color" content="#0b0e11" />
 
-  <!-- Primary Meta -->
-  <meta name="description" content="Portfolio of Rudra Vashi — Data Analyst & ICT Master's candidate in Adelaide. Case studies in analytics, BI dashboards, and cloud solutions on AWS." />
-  <link rel="canonical" href="https://rv2430.github.io/RV2430.Personal-Portfolio/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232a7c9b%22/><rect x=%2214%22 y=%2214%22 width=%2272%22 height=%2272%22 rx=%2214%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-opacity=%220.35%22 stroke-width=%223%22/><text x=%2250%22 y=%2268%22 font-size=%2244%22 font-weight=%22600%22 font-family=%22ui-monospace,monospace%22 fill=%22white%22 text-anchor=%22middle%22>rv</text></svg>" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Rudra Vashi — Data Analyst & ICT Engineer" />
-  <meta property="og:description" content="Case studies in analytics, BI dashboards, and cloud infrastructure." />
-  <meta property="og:url" content="https://rv2430.github.io/RV2430.Personal-Portfolio/" />
+  <!-- Open Graph / social share -->
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="RudraVashi.jpeg" />
+  <meta property="og:title" content="Rudra Vashi — Data Analyst & ICT Engineer" />
+  <meta property="og:description" content="Turning data into decisions & scalable systems. Analytics, BI dashboards, and AWS infrastructure. Adelaide, AU." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rudra Vashi — Data Analyst & ICT Engineer" />
+  <meta name="twitter:description" content="Turning data into decisions & scalable systems. Adelaide, AU." />
+  <meta name="twitter:image" content="assets/og-image.png" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Tailwind Config -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Outfit', 'ui-sans-serif', 'system-ui'] },
-          colors: {
-            brand: {
-              50:  '#ecfeff',
-              100: '#cffafe',
-              200: '#a5f3fc',
-              300: '#67e8f9',
-              400: '#22d3ee',
-              500: '#06b6d4',
-              600: '#0891b2',
-              700: '#0e7490',
-              800: '#155e75',
-              900: '#164e63'
-            }
-          },
-          boxShadow: {
-            glow: '0 10px 30px -10px rgba(6,182,212,.35)'
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    :root { color-scheme: light dark }
-    body { font-family: 'Outfit', sans-serif; }
-    /* Animated gradient backdrop in hero */
-    .hero-gradient::before {
-      content: '';
-      position: absolute; inset: -20% -10%;
-      background: conic-gradient(from 180deg at 50% 50%, #06b6d4, #6366f1, #10b981, #06b6d4);
-      filter: blur(80px); opacity: .25; transform: translateZ(0);
-      animation: spin 18s linear infinite;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .hero-gradient::before { animation: none }
-      .reveal { transition: none !important; opacity: 1 !important; transform: none !important; }
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg) scale(1.1) }
-      100% { transform: rotate(360deg) scale(1.1) }
-    }
-    /* Reveal animation */
-    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.in { opacity: 1; transform: translateY(0) }
-    /* Focus rings */
-    :focus-visible { outline: 3px solid #06b6d4; outline-offset: 2px }
-    /* Chips */
-    .chip{padding:.5rem .8rem;border-radius:.7rem;border:1px solid var(--tw-prose-borders,#e2e8f0);background:rgba(255,255,255,.6)}
-    .dark .chip{background:rgba(2,6,23,.6);border-color:#334155}
-  </style>
-
-  <!-- Person Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Rudra Vashi",
-    "image":"https://rv2430.github.io/RV2430.Personal-Portfolio/RudraVashi.jpeg",
-    "jobTitle":"Data Analyst & ICT Specialist",
-    "address":{"@type":"PostalAddress","addressLocality":"Adelaide","addressCountry":"AU"},
-    "email":"mailto:vashirudra8@gmail.com",
-    "url":"https://rv2430.github.io/RV2430.Personal-Portfolio/",
-    "sameAs":[
-      "https://github.com/RV2430",
-      "https://www.linkedin.com/in/rudra-v-9a6237222"
-    ]
-  }
-  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+<body>
+  <a href="#about" class="sr-only">Skip to content</a>
 
-  <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only absolute top-2 left-2 bg-brand-600 text-white px-3 py-2 rounded-md">Skip to content</a>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="nav">
+      <a class="brand" href="#home" aria-label="Rudra Vashi — home">
+        <span class="glyph">rv</span>
+        <span><b>Rudra Vashi</b> <span class="dim mono">/ analyst</span></span>
+      </a>
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 backdrop-blur bg-white/75 dark:bg-slate-950/70 border-b border-slate-200 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-      <a href="#" class="text-xl font-extrabold tracking-tight">Rudra<span class="text-brand-600"> Vashi</span></a>
-
-      <nav aria-label="Primary" class="hidden md:flex items-center gap-8 text-sm">
-        <a class="hover:text-brand-600" href="#about">About</a>
-        <a class="hover:text-brand-600" href="#skills">Skills</a>
-        <a class="hover:text-brand-600" href="#projects">Projects</a>
-        <a class="hover:text-brand-600" href="#experience">Experience</a>
-        <a class="hover:text-brand-600" href="#contact">Contact</a>
-        <div class="pl-6 ml-2 border-l border-slate-200 dark:border-slate-700 flex items-center gap-3">
-          <button id="theme-toggle" class="p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle theme">
-            <svg class="dark:hidden w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.79 1.8-1.79zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zM4.22 19.78l1.79-1.79-1.8-1.8-1.79 1.8 1.8 1.79zM20 13h3v-2h-3v2zM17.24 4.84l1.8-1.79 1.41 1.41-1.8 1.79-1.41-1.41zM12 4a8 8 0 100 16 8 8 0 000-16z"/></svg>
-            <svg class="hidden dark:block w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.742 13.045A8 8 0 1111 3.258a9 9 0 109.742 9.787z"/></svg>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="navlink" href="#about"><span class="n">01</span> about</a>
+        <a class="navlink" href="#skills"><span class="n">02</span> stack</a>
+        <a class="navlink" href="#projects"><span class="n">03</span> work</a>
+        <a class="navlink" href="#experience"><span class="n">04</span> path</a>
+        <div class="nav-tools">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19" stroke-linecap="round"/></svg>
           </button>
-          <a href="#contact" class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-md hover:bg-brand-700 shadow-glow">Let’s talk</a>
+          <a href="#contact" class="btn btn-primary">contact <span class="arr">→</span></a>
         </div>
       </nav>
 
-      <button id="menu-btn" class="md:hidden p-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <button id="menu-btn" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
       </button>
     </div>
-    <!-- Mobile -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800">
-      <nav class="px-6 py-4 space-y-2" aria-label="Mobile">
-        <a class="block py-2" href="#about">About</a>
-        <a class="block py-2" href="#skills">Skills</a>
-        <a class="block py-2" href="#projects">Projects</a>
-        <a class="block py-2" href="#experience">Experience</a>
-        <a class="block py-2" href="#contact">Contact</a>
-        <a class="inline-flex items-center gap-2 bg-brand-600 text-white px-4 py-2 rounded-md hover:bg-brand-700" href="#contact">Let’s talk</a>
+    <div id="mobile-menu" class="mobile-menu">
+      <nav aria-label="Mobile">
+        <a href="#about">01 — about</a>
+        <a href="#skills">02 — stack</a>
+        <a href="#projects">03 — work</a>
+        <a href="#experience">04 — path</a>
+        <a href="#contact">05 — contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="relative hero-gradient overflow-hidden">
-    <div class="mx-auto max-w-7xl px-6 pt-16 pb-24 lg:pt-24 lg:pb-36 relative">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="reveal in">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 dark:bg-slate-800 dark:text-brand-200 border border-brand-200/60 dark:border-slate-700 text-xs font-semibold">
-            <span class="relative flex h-2 w-2">
-              <span class="absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75 animate-ping"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
-            </span>
-            Adelaide, Australia
-          </div>
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero" data-screen-label="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="status">
+          <span class="dot"><i class="ping"></i><i></i></span>
+          Adelaide, AU · available for work
+        </span>
 
-          <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-            I turn <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-sky-500 to-indigo-500">data</span> into decisions & scalable systems.
-          </h1>
+        <h1>I turn <span class="mark">data</span> into decisions &amp; scalable systems.</h1>
 
-          <p class="mt-5 text-lg text-slate-600 dark:text-slate-300 max-w-xl">
-            Data Analyst & ICT specialist blending predictive analytics with AWS‑based infrastructure. I build end‑to‑end insights: ingestion → modeling → visualization → operationalization.
-          </p>
+        <p class="lede">
+          Data Analyst &amp; ICT specialist blending <b>predictive analytics</b> with <b>AWS infrastructure</b>.
+          End-to-end: ingestion → modeling → visualization → operationalization.
+        </p>
 
-          <div class="mt-7 flex flex-wrap gap-3">
-            <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 shadow-glow">View case studies</a>
-            <a href="https://raw.githubusercontent.com/RV2430/RV2430.Personal-Portfolio/main/Rudra_Vashi_Resume.pdf" target="_blank" class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">Download résumé</a>
-          </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">view case studies <span class="arr">→</span></a>
+          <a href="assets/Rudra_Vashi_Resume.pdf" download="Rudra_Vashi_Resume.pdf" class="btn btn-ghost">download résumé ↓</a>
         </div>
 
-        <div class="reveal lg:justify-self-end">
-          <div class="relative">
-            <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand-500/20 via-cyan-400/10 to-indigo-500/10 blur-2xl"></div>
-            <img src="RV.png" alt="Portrait of Rudra Vashi" loading="eager" width="384" height="384"
-                 class="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-[2rem] shadow-2xl border-4 border-white dark:border-slate-900"/>
-            <div class="absolute -bottom-4 -left-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 grid place-items-center">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 5h16v3H4zM4 10h16v9H4z"/></svg>
-                </div>
-                <div>
-                  <p class="text-xs text-slate-600 dark:text-slate-400">Specialization</p>
-                  <p class="text-sm font-semibold">Analytics & BI</p>
-                </div>
-              </div>
-            </div>
+        <div class="hero-meta">
+          <div class="kv"><span class="k">Role</span><span class="v">Data Analyst · ICT</span></div>
+          <div class="kv"><span class="k">Focus</span><span class="v">Analytics &amp; BI</span></div>
+          <div class="kv"><span class="k">Cloud</span><span class="v">AWS · Terraform</span></div>
+          <div class="kv"><span class="k">Status</span><span class="v">M.ICT candidate</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="panel" id="hero-panel">
+          <span class="br"></span>
+          <div class="panel-bar">
+            <span>Rudra Vashi · Adelaide, AU</span>
+            <span class="dots"><span></span><span></span><span></span></span>
           </div>
-        </div>  
+          <div class="portrait">
+            <img src="assets/rudra.jpeg" alt="Portrait of Rudra Vashi" width="560" height="560" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <main id="main">
-    <!-- About -->
-    <section id="about" class="py-20">
-      <div class="mx-auto max-w-5xl px-6">
-        <h2 class="text-3xl font-extrabold text-center">About</h2>
-        <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 text-center max-w-3xl mx-auto reveal">
-          I’m a data‑driven builder: I love turning ambiguous business problems into measurable outcomes. Recent work spans
-          <strong>attrition modeling</strong>, <strong>interactive BI</strong>, and <strong>AWS IaC</strong> with Terraform.
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section" data-screen-label="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">01</span><span class="label">about</span><span class="rule"></span>
+      </div>
+
+      <div class="about-grid">
+        <p class="about-lede reveal">
+          I turn ambiguous business problems into measurable outcomes — across attrition modeling, interactive BI, and AWS infrastructure-as-code.
         </p>
 
-        <div class="mt-10 grid md:grid-cols-3 gap-6 reveal">
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-            <p class="text-sm text-slate-500">Core strengths</p>
-            <ul class="mt-2 space-y-2">
-              <li>Exploratory data analysis & feature engineering</li>
-              <li>Story‑driven dashboards (Power BI / Tableau)</li>
-              <li>Cloud‑ready pipelines & automation</li>
-            </ul>
-          </div>
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-            <p class="text-sm text-slate-500">How I work</p>
-            <ul class="mt-2 space-y-2">
-              <li>Speak in outcomes, not tools</li>
-              <li>Version everything; document decisions</li>
-              <li>Bias to ship iteratively</li>
-            </ul>
-          </div>
-          <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-            <p class="text-sm text-slate-500">Currently</p>
-            <ul class="mt-2 space-y-2">
-              <li>M.ICT candidate, University of Sunshine Coast</li>
-              <li>Seeking Data/ICT roles in Adelaide</li>
-              <li>Open to remote collaboration</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+        <p class="about-note reveal">
+          Technology shifts every single day — and as an IT person, that's the part I enjoy most. I stay genuinely excited to learn new tools, generate ideas, and put them to work on real projects.
+        </p>
 
-    <!-- Skills -->
-    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-950/50">
-      <div class="mx-auto max-w-7xl px-6">
-        <h2 class="text-3xl font-extrabold text-center">Tools & Technologies</h2>
-
-        <div class="mt-10 grid lg:grid-cols-3 gap-8">
-          <div class="reveal">
-            <h3 class="font-semibold text-lg flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-brand-500"></span> Data & Languages
-            </h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="chip">Python</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">scikit‑learn</span>
-              <span class="chip">SQL (MySQL)</span>
-              <span class="chip">PHP</span>
-              <span class="chip">JavaScript</span>
-            </div>
-          </div>
-
-          <div class="reveal">
-            <h3 class="font-semibold text-lg flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-brand-500"></span> Cloud & DevOps
-            </h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="chip">AWS (ECS, EC2, S3)</span>
-              <span class="chip">Terraform (IaC)</span>
-              <span class="chip">Docker</span>
-              <span class="chip">Git & GitHub</span>
-              <span class="chip">GitLab</span>
-            </div>
-          </div>
-
-          <div class="reveal">
-            <h3 class="font-semibold text-lg flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-brand-500"></span> BI & Visualization
-            </h3>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="chip">Power BI</span>
-              <span class="chip">Tableau</span>
-              <span class="chip">Excel (Advanced)</span>
-              <span class="chip">EDA & Storytelling</span>
-              <span class="chip">HTML/CSS</span>
-              <span class="chip">Bootstrap</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Certifications (with logo placeholders) -->
-<div class="mt-12 grid sm:grid-cols-3 gap-4">
-
-  <!-- Google: Foundation: Data, Data, Everywhere -->
-  <a href="https://in.coursera.org/account/accomplishments/verify/ANWQXR4ERS8D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
-     target="_blank" rel="noopener"
-     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-sky-400 transition-colors reveal">
-    <div class="flex items-center gap-3">
-      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
-        <!-- 🔁 Replace src with your downloaded file path -->
-        <img src="g.jpeg" alt="Google logo" class="w-7 h-7 object-contain" loading="lazy">
-      </span>
-      <div class="text-sky-600 dark:text-sky-400 text-sm font-semibold">Google</div>
-    </div>
-    <h4 class="font-bold mt-3">Foundation: Data, Data, Everywhere</h4>
-    <p class="text-xs text-slate-500">Nov 2022</p>
-  </a>
-
-  <!-- Google: IT Security -->
-  <a href="https://in.coursera.org/account/accomplishments/verify/ANWQXR4ERS8D?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
-     target="_blank" rel="noopener"
-     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-sky-400 transition-colors reveal">
-    <div class="flex items-center gap-3">
-      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
-        <img src="g.jpeg" alt="Google logo" class="w-7 h-7 object-contain" loading="lazy">
-      </span>
-      <div class="text-sky-600 dark:text-sky-400 text-sm font-semibold">Google</div>
-    </div>
-    <h4 class="font-bold mt-3">IT Security: Defense Against the Digital Dark Arts</h4>
-    <p class="text-xs text-slate-500">Oct 2022</p>
-  </a>
-
-  <!-- Great Learning: Power BI -->
-  <a href="https://olympus.mygreatlearning.com/courses/30824/certificate"
-     target="_blank" rel="noopener"
-     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-yellow-400 transition-colors reveal">
-    <div class="flex items-center gap-3">
-      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
-        <img src="GL.png" alt="Great Learning logo" class="w-7 h-7 object-contain" loading="lazy">
-      </span>
-      <div class="text-yellow-600 dark:text-yellow-400 text-sm font-semibold">Great Learning</div>
-    </div>
-    <h4 class="font-bold mt-3">Data Visualisation with Power BI</h4>
-    <p class="text-xs text-slate-500">Jul 2023</p>
-  </a>
-
-  <!-- AWS: Academy Cloud Foundations -->
-  <a href="https://www.credly.com/badges/eda6b6a2-9c4d-41e4-ae3b-27fa9fab34e6/linked_in_profile"
-     target="_blank" rel="noopener"
-     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-amber-400 transition-colors reveal">
-    <div class="flex items-center gap-3">
-      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
-        <img src="aws-color.png" alt="Amazon Web Services logo" class="w-7 h-7 object-contain" loading="lazy">
-      </span>
-      <div class="text-amber-600 dark:text-amber-400 text-sm font-semibold">Amazon Web Services</div>
-    </div>
-    <h4 class="font-bold mt-3">AWS Academy Graduate — Cloud Foundations</h4>
-    <p class="text-xs text-slate-500">Sep 2023</p>
-  </a>
-
-  <!-- AWS: Cloud Technical Essentials -->
-  <a href="https://www.coursera.org/account/accomplishments/records/UQBKVYR5FJJH"
-     target="_blank" rel="noopener"
-     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-amber-400 transition-colors reveal">
-    <div class="flex items-center gap-3">
-      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
-        <img src="aws-color.png" alt="Amazon Web Services logo" class="w-7 h-7 object-contain" loading="lazy">
-      </span>
-      <div class="text-amber-600 dark:text-amber-400 text-sm font-semibold">Amazon Web Services</div>
-    </div>
-    <h4 class="font-bold mt-3">AWS Cloud Technical Essentials</h4>
-    <p class="text-xs text-slate-500">Aug 2024</p>
-  </a>
-
-  <!-- Pearson: IT Specialist — Python -->
-  <a href="https://www.credly.com/badges/e5ba3d91-5346-4070-b57d-519c839c9712/linked_in_profile"
-     target="_blank" rel="noopener"
-     class="group p-5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 hover:border-emerald-400 transition-colors reveal">
-    <div class="flex items-center gap-3">
-      <span class="inline-grid place-items-center w-10 h-10 rounded-lg bg-white dark:bg-white/90 ring-1 ring-slate-200">
-        <img src="pearson-logo-0.png" alt="Pearson logo" class="w-7 h-7 object-contain" loading="lazy">
-      </span>
-      <div class="text-emerald-600 dark:text-emerald-400 text-sm font-semibold">Pearson</div>
-    </div>
-    <h4 class="font-bold mt-3">IT Specialist — Python</h4>
-    <p class="text-xs text-slate-500">Feb 2026</p>
-  </a>
-
-</div>
-    <!-- Projects -->
-<section id="projects" class="py-20">
-  <div class="mx-auto max-w-7xl px-6">
-    <h2 class="text-3xl font-extrabold text-center">Featured Projects</h2>
-
-    <div class="mt-12 grid md:grid-cols-2 gap-8">
-
-      <!-- 1) Employee Attrition Model (Repo only) -->
-      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
-        <div class="h-44 bg-gradient-to-r from-brand-600 to-emerald-500 grid place-items-center text-white">
-          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-          </svg>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold group-hover:text-brand-600 transition-colors">Employee Attrition Model</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Predicted churn risk and surfaced drivers for HR using scikit‑learn and SHAP‑style interpretability.
-          </p>
-          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400">
-            <li><strong>Problem:</strong> High replacement costs and unmanaged attrition.</li>
-            <li><strong>Approach:</strong> EDA → feature selection → model tuning → explainability.</li>
-            <li><strong>Impact:</strong> Identified top levers; informed retention strategy.</li>
+        <div class="spec reveal" data-d="1">
+          <div class="spec-h"><span class="t">core strengths</span><span class="i">01</span></div>
+          <ul>
+            <li>Exploratory analysis &amp; feature engineering</li>
+            <li>Story-driven dashboards (Power BI / Tableau)</li>
+            <li>Cloud-ready pipelines &amp; automation</li>
           </ul>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip">Python</span><span class="chip">scikit‑learn</span><span class="chip">EDA</span>
-          </div>
-
-          <!-- CTAs -->
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="https://github.com/RV2430/-Employee-Attrition-Workforce" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
-              View repo
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
-              </svg>
-            </a>
-          </div>
         </div>
-      </article>
 
-      <!-- 2) Power BI Sales Dashboard (Repo only) -->
-      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
-        <div class="h-44 bg-gradient-to-r from-amber-400 to-orange-500 grid place-items-center text-white">
-          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-          </svg>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold group-hover:text-amber-600 transition-colors">Power BI Sales Dashboard</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Executive dashboard with dynamic filtering, funnel metrics, and region‑level performance tracking.
-          </p>
-          <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-400">
-            <li><strong>Problem:</strong> Fragmented reporting → slow decisions.</li>
-            <li><strong>Approach:</strong> Data model + DAX + design system.</li>
-            <li><strong>Impact:</strong> Faster KPI reviews; improved regional focus.</li>
+        <div class="spec reveal" data-d="2">
+          <div class="spec-h"><span class="t">how i work</span><span class="i">02</span></div>
+          <ul>
+            <li>Speak in outcomes, not tools</li>
+            <li>Version everything; document decisions</li>
+            <li>Bias to ship iteratively</li>
           </ul>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Data Viz</span>
-          </div>
-
-          <!-- CTAs -->
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="https://github.com/RV2430/PowerBI-Sales-Dashboard" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
-              View repo
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
-              </svg>
-            </a>
-          </div>
         </div>
-      </article>
 
-      <!-- 3) Inventory Management System (Repo + Live) -->
-      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
-        <div class="h-44 bg-gradient-to-r from-indigo-500 to-purple-600 grid place-items-center text-white">
-          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-          </svg>
+        <div class="spec reveal" data-d="3">
+          <div class="spec-h"><span class="t">currently</span><span class="i">03</span></div>
+          <ul>
+            <li>M.ICT candidate, Univ. of Sunshine Coast</li>
+            <li>Seeking Data / ICT roles in Adelaide</li>
+            <li>Open to remote collaboration</li>
+          </ul>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold group-hover:text-indigo-600 transition-colors">Inventory Management System</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Lightweight web app for stock control with low‑stock alerts, vendor tracking, and CSV reports.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
-          </div>
-
-          <!-- CTAs -->
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="https://rv2430.github.io/IMS/" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 text-white font-semibold hover:bg-indigo-700 shadow-glow">
-              Live demo
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
-              </svg>
-            </a>
-
-            <a href="https://github.com/RV2430/IMS" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
-              View repo
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4) Personal Expense Tracker (Repo + Live) -->
-      <article class="reveal group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:shadow-xl transition-all">
-        <div class="h-44 bg-gradient-to-r from-cyan-500 to-blue-600 grid place-items-center text-white">
-          <svg class="w-12 h-12 opacity-90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-          </svg>
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold group-hover:text-cyan-600 transition-colors">Personal Expense Tracker</h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Web-based tracker for logging expenses, categorizing spend, and visualizing insights.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2">
-            <span class="chip">HTML</span><span class="chip">Tailwind</span><span class="chip">JavaScript</span><span class="chip">Chart.js</span>
-          </div>
-
-          <!-- CTAs -->
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a href="https://rv2430.github.io/" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-600 text-white font-semibold hover:bg-cyan-700 shadow-glow">
-              Live demo
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
-              </svg>
-            </a>
-
-            <a href="https://github.com/RV2430/RV2430.github.io" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
-              View repo
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-    <!-- Experience (SPLIT: Education on left, Work on right) -->
-<section id="experience" class="py-20 bg-slate-50 dark:bg-slate-950/50">
-  <div class="mx-auto max-w-7xl px-6">
-    <h2 class="text-3xl font-extrabold text-center">Journey so far</h2>
-
-    <div class="mt-12 grid lg:grid-cols-2 gap-10">
-      <!-- ===================== EDUCATION (LEFT) ===================== -->
-      <div class="lg:order-1">
-        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-brand-600"></span> Education
-        </h3>
-
-        <ol class="relative ml-3 border-l border-slate-200 dark:border-slate-800 space-y-10">
-          <!-- Master -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-brand-700 dark:text-brand-300 uppercase tracking-wide">Nov 2025 – Jul 2027</div>
-            <h4 class="text-lg font-bold mt-1">Master in Information &amp; Communication Technology (Candidate)</h4>
-            <p class="text-sm text-slate-500">University of Sunshine Coast · Adelaide, Australia</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              <strong>Specialization:</strong> Python/SQL, Data Visualisation, Machine Learning, Business Analytics
-            </p>
-          </li>
-
-          <!-- Bachelor -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Jun 2020 – Jul 2024</div>
-            <h4 class="text-lg font-bold mt-1">B.Tech in Information Technology</h4>
-            <p class="text-sm text-slate-500">UKA Tarsadia University · Bardoli, Gujarat</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              <strong>Specialization:</strong> Data Analysis, Cloud Technology, SQL &amp; Data Visualisation
-            </p>
-          </li>
-        </ol>
-      </div>
-
-      <!-- ===================== WORK EXPERIENCE (RIGHT) ===================== -->
-      <div class="lg:order-2">
-        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-slate-400"></span> Work Experience
-        </h3>
-
-        <ol class="relative ml-3 border-l border-slate-200 dark:border-slate-800 space-y-10">
-          <!-- IT Associate -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Apr 2025 – Oct 2025</div>
-            <h4 class="text-lg font-bold mt-1">IT Associate · MedhSystems</h4>
-            <p class="text-sm text-slate-500">Mumbai, Maharashtra</p>
-            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
-              <li>ERP assistance and documentation; improved efficiency and communication.</li>
-            </ul>
-            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> ERP Software</p>
-          </li>
-
-          <!-- IT Associate Intern -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Oct 2024 – Mar 2025</div>
-            <h4 class="text-lg font-bold mt-1">IT Associate Intern · Medh Systems</h4>
-            <p class="text-sm text-slate-500">Mumbai, Maharashtra</p>
-            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
-              <li>Collaborated with the IT team on projects, enhancing team efficiency and communication.</li>
-              <li>Demonstrated effective time management while maintaining a positive attitude.</li>
-            </ul>
-            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> ERP Software</p>
-          </li>
-
-          <!-- ERP & Data Analytics Intern -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Jun 2024 – Sep 2024</div>
-            <h4 class="text-lg font-bold mt-1">ERP &amp; Data Analytics Intern · Merciglobal Systems</h4>
-            <p class="text-sm text-slate-500">Surat, Gujarat</p>
-            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
-              <li>Built HR/Sales dashboards; developed ERP systems for clients across industries.</li>
-            </ul>
-            <p class="mt-1 text-sm text-slate-500">
-              <strong>Tools:</strong> PersivX, Vanilla JS, PHP, SQL, HTML, CSS
-            </p>
-          </li>
-
-          <!-- AWS Associate Intern -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Dec 2023 – May 2024</div>
-            <h4 class="text-lg font-bold mt-1">AWS Associate Intern · Logictrix Infotech</h4>
-            <p class="text-sm text-slate-500">Surat, Gujarat</p>
-            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
-              <li>Deployed container apps on Amazon ECS; automated infrastructure via Terraform.</li>
-            </ul>
-            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> AWS, GitLab, Terraform, Docker</p>
-          </li>
-
-          <!-- Web Developer Intern -->
-          <li class="reveal pl-6">
-            <span class="absolute -left-2 top-1 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-slate-950"></span>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide">May 05, 2023 – Jun 09, 2023</div>
-            <h4 class="text-lg font-bold mt-1">Web Developer Intern · Toshal Infotech</h4>
-            <p class="text-sm text-slate-500">Surat, Gujarat</p>
-            <ul class="mt-2 list-disc pl-5 text-slate-600 dark:text-slate-300 space-y-1">
-              <li>Created web‑based templates with responsive layouts and reusable components.</li>
-            </ul>
-            <p class="mt-1 text-sm text-slate-500"><strong>Tools:</strong> HTML, CSS, Bootstrap, JavaScript</p>
-          </li>
-        </ol>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-   <!-- Contact -->
-<section id="contact" class="py-20">
-  <div class="mx-auto max-w-3xl px-6 text-center">
-    
-    <h2 class="text-3xl font-extrabold">Get in touch</h2>
-    <p class="mt-4 text-slate-600 dark:text-slate-300">
-      Reach out anytime — I’d love to connect!
-    </p>
-
-    <div class="mt-10 grid sm:grid-cols-3 gap-6">
-
-      <!-- Email -->
-      <a href="mailto:vashirudra8@gmail.com"
-         class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-brand-500 transition-all shadow-sm hover:shadow-lg">
-        <div class="text-brand-600 dark:text-brand-400 text-3xl mb-3">
-          📧
-        </div>
-        <h3 class="font-bold text-lg">Email</h3>
-        <p class="text-sm text-slate-500 mt-1">vashirudra8@gmail.com</p>
-      </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/rudra-v-9a6237222"
-         target="_blank"
-         class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-sky-500 transition-all shadow-sm hover:shadow-lg">
-        <div class="text-sky-600 dark:text-sky-400 text-3xl mb-3">
-          🔗
-        </div>
-        <h3 class="font-bold text-lg">LinkedIn</h3>
-        <p class="text-sm text-slate-500 mt-1">Message me directly</p>
-      </a>
-
-      <!-- GitHub -->
-      <a href="https://github.com/RV2430"
-         target="_blank"
-         class="group p-6 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 hover:border-indigo-500 transition-all shadow-sm hover:shadow-lg">
-        <div class="text-indigo-600 dark:text-indigo-400 text-3xl mb-3">
-          🧩
-        </div>
-        <h3 class="font-bold text-lg">GitHub</h3>
-        <p class="text-sm text-slate-500 mt-1">View my projects</p>
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 dark:border-slate-800 py-10">
-    <div class="mx-auto max-w-7xl px-6 text-center text-sm text-slate-500">
-      <div class="flex items-center justify-center gap-5 mb-4">
-        <a aria-label="GitHub" href="https://github.com/RV2430" target="_blank" class="hover:text-brand-600">GitHub</a>
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" class="hover:text-brand-600">LinkedIn</a>
-        <a aria-label="Email" href="mailto:vashirudra8@gmail.com" class="hover:text-brand-600">Email</a>
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section section--alt" data-screen-label="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">02</span><span class="label">stack</span><span class="rule"></span>
       </div>
-      <p>© <span id="year"></span> Rudra Vashi • Built with Tailwind</p>
+
+      <div class="stack">
+        <div class="stack-col reveal" data-d="1">
+          <h3><span class="b"></span> Data &amp; Languages</h3>
+          <div class="chips">
+            <span class="chip">python</span><span class="chip">pandas</span><span class="chip">numpy</span>
+            <span class="chip">scikit-learn</span><span class="chip">sql · mysql</span><span class="chip">php</span><span class="chip">javascript</span>
+          </div>
+        </div>
+        <div class="stack-col reveal" data-d="2">
+          <h3><span class="b"></span> Cloud &amp; DevOps</h3>
+          <div class="chips">
+            <span class="chip">aws · ecs/ec2/s3</span><span class="chip">terraform</span><span class="chip">docker</span>
+            <span class="chip">git · github</span><span class="chip">gitlab</span>
+          </div>
+        </div>
+        <div class="stack-col reveal" data-d="3">
+          <h3><span class="b"></span> BI &amp; Visualization</h3>
+          <div class="chips">
+            <span class="chip">power bi</span><span class="chip">tableau</span><span class="chip">excel · adv</span>
+            <span class="chip">eda &amp; storytelling</span><span class="chip">html/css</span><span class="chip">bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:3.5rem;">
+        <span class="idx">02.1</span><span class="label">certifications</span><span class="rule"></span><span class="count">06</span>
+      </div>
+
+      <div class="certs" style="margin-top:0;">
+        <a class="cert reveal" data-d="1" target="_blank" rel="noopener" href="https://in.coursera.org/account/accomplishments/verify/ANWQXR4ERS8D">
+          <div class="cert-top"><span class="issuer">google</span><span class="date">nov 2022</span></div>
+          <h4>Foundation: Data, Data, Everywhere</h4>
+          <span class="verify">verify ↗</span>
+        </a>
+        <a class="cert reveal" data-d="2" target="_blank" rel="noopener" href="https://in.coursera.org/account/accomplishments/verify/ANWQXR4ERS8D">
+          <div class="cert-top"><span class="issuer">google</span><span class="date">oct 2022</span></div>
+          <h4>IT Security: Defense Against the Digital Dark Arts</h4>
+          <span class="verify">verify ↗</span>
+        </a>
+        <a class="cert reveal" data-d="3" target="_blank" rel="noopener" href="https://olympus.mygreatlearning.com/courses/30824/certificate">
+          <div class="cert-top"><span class="issuer">great learning</span><span class="date">jul 2023</span></div>
+          <h4>Data Visualisation with Power BI</h4>
+          <span class="verify">verify ↗</span>
+        </a>
+        <a class="cert reveal" data-d="1" target="_blank" rel="noopener" href="https://www.credly.com/badges/eda6b6a2-9c4d-41e4-ae3b-27fa9fab34e6/linked_in_profile">
+          <div class="cert-top"><span class="issuer">aws</span><span class="date">sep 2023</span></div>
+          <h4>AWS Academy Graduate — Cloud Foundations</h4>
+          <span class="verify">verify ↗</span>
+        </a>
+        <a class="cert reveal" data-d="2" target="_blank" rel="noopener" href="https://www.coursera.org/account/accomplishments/records/UQBKVYR5FJJH">
+          <div class="cert-top"><span class="issuer">aws</span><span class="date">aug 2024</span></div>
+          <h4>AWS Cloud Technical Essentials</h4>
+          <span class="verify">verify ↗</span>
+        </a>
+        <a class="cert reveal" data-d="3" target="_blank" rel="noopener" href="https://www.credly.com/badges/e5ba3d91-5346-4070-b57d-519c839c9712/linked_in_profile">
+          <div class="cert-top"><span class="issuer">pearson</span><span class="date">feb 2026</span></div>
+          <h4>IT Specialist — Python</h4>
+          <span class="verify">verify ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section" data-screen-label="projects">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">03</span><span class="label">work</span><span class="rule"></span><span class="count">05</span>
+      </div>
+
+      <div class="projects">
+        <!-- 1 -->
+        <article class="project reveal" data-d="1">
+          <div class="thumb">
+            <span class="tag">ml · regression</span><span class="id">P-01</span>
+            <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="30" cy="86" r="3.5"/><circle cx="52" cy="74" r="3.5"/><circle cx="44" cy="92" r="3.5"/>
+              <circle cx="70" cy="64" r="3.5"/><circle cx="96" cy="58" r="3.5"/><circle cx="120" cy="44" r="3.5"/>
+              <circle cx="148" cy="38" r="3.5"/><circle cx="168" cy="26" r="3.5"/><circle cx="84" cy="80" r="3.5"/>
+              <circle cx="132" cy="62" r="3.5"/>
+              <path d="M22 96 L182 22" stroke-dasharray="5 5" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Household Electricity Predictor</h3>
+            <p class="desc">Regularised regression pipeline predicting monthly household electricity use; k-means segmentation surfaced an &ldquo;energy-stress&rdquo; cohort.</p>
+            <div class="pai">
+              <div class="row"><span class="lab">problem</span><span class="val">Which households to prioritise for efficiency support?</span></div>
+              <div class="row"><span class="lab">approach</span><span class="val">Feature engineering → Lasso regression → k-means.</span></div>
+              <div class="row"><span class="lab">impact</span><span class="val">R² = 0.925, RMSE ≈ 1,031 kWh across 4,000+ households.</span></div>
+            </div>
+            <div class="chips"><span class="chip">python</span><span class="chip">scikit-learn</span><span class="chip">pandas</span></div>
+            <div class="project-cta">
+              <a class="link" href="https://github.com/RV2430/Electricity-Consumption-ML" target="_blank" rel="noopener">view repo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="project reveal" data-d="2">
+          <div class="thumb">
+            <span class="tag">bi · hr analytics</span><span class="id">P-02</span>
+            <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="64" y1="20" x2="64" y2="104" opacity="0.4"/>
+              <rect x="70" y="26" width="88" height="12" fill="currentColor" opacity="0.18"/><rect x="70" y="26" width="88" height="12"/>
+              <rect x="70" y="46" width="64" height="12" fill="currentColor" opacity="0.18"/><rect x="70" y="46" width="64" height="12"/>
+              <rect x="70" y="66" width="40" height="12" fill="currentColor" opacity="0.18"/><rect x="70" y="66" width="40" height="12"/>
+              <rect x="70" y="86" width="26" height="12" fill="currentColor" opacity="0.18"/><rect x="70" y="86" width="26" height="12"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Employee Attrition Insights</h3>
+            <p class="desc">HR analytics dashboard on the IBM HR dataset surfacing attrition hotspots and the engagement gaps driving turnover.</p>
+            <div class="pai">
+              <div class="row"><span class="lab">problem</span><span class="val">Where is attrition concentrated, and why?</span></div>
+              <div class="row"><span class="lab">approach</span><span class="val">Data model + DAX measures + drill-down visuals.</span></div>
+              <div class="row"><span class="lab">impact</span><span class="val">Pinpointed R&amp;D &amp; Sales as top-attrition depts across 1,470 records.</span></div>
+            </div>
+            <div class="chips"><span class="chip">power bi</span><span class="chip">dax</span><span class="chip">hr analytics</span></div>
+            <div class="project-cta">
+              <a class="link" href="https://github.com/RV2430/-Employee-Attrition-Workforce" target="_blank" rel="noopener">view repo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="project reveal" data-d="1">
+          <div class="thumb">
+            <span class="tag">bi · dashboard</span><span class="id">P-03</span>
+            <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="22" y1="100" x2="182" y2="100" opacity="0.5"/>
+              <rect x="34" y="64" width="20" height="36" fill="currentColor" opacity="0.18"/><rect x="34" y="64" width="20" height="36"/>
+              <rect x="66" y="44" width="20" height="56" fill="currentColor" opacity="0.18"/><rect x="66" y="44" width="20" height="56"/>
+              <rect x="98" y="56" width="20" height="44" fill="currentColor" opacity="0.18"/><rect x="98" y="56" width="20" height="44"/>
+              <rect x="130" y="30" width="20" height="70" fill="currentColor" opacity="0.18"/><rect x="130" y="30" width="20" height="70"/>
+              <rect x="162" y="48" width="20" height="52" fill="currentColor" opacity="0.18"/><rect x="162" y="48" width="20" height="52"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Power BI Sales Dashboard</h3>
+            <p class="desc">Interactive sales analytics dashboard with dynamic slicers, funnel metrics, and region-level performance tracking.</p>
+            <div class="pai">
+              <div class="row"><span class="lab">problem</span><span class="val">Fragmented reporting → slow decisions.</span></div>
+              <div class="row"><span class="lab">approach</span><span class="val">Data model + DAX + design system.</span></div>
+              <div class="row"><span class="lab">impact</span><span class="val">Surfaced $2.30M sales &amp; $286K profit across regions &amp; segments.</span></div>
+            </div>
+            <div class="chips"><span class="chip">power bi</span><span class="chip">dax</span><span class="chip">data viz</span></div>
+            <div class="project-cta">
+              <a class="link" href="https://github.com/RV2430/PowerBI-Sales-Dashboard" target="_blank" rel="noopener">view repo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="project reveal" data-d="2">
+          <div class="thumb">
+            <span class="tag">web app · live</span><span class="id">P-04</span>
+            <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="30" y="24" width="140" height="72" rx="4"/>
+              <line x1="30" y1="42" x2="170" y2="42" opacity="0.6"/>
+              <line x1="72" y1="42" x2="72" y2="96" opacity="0.6"/>
+              <line x1="114" y1="42" x2="114" y2="96" opacity="0.6"/>
+              <line x1="30" y1="60" x2="170" y2="60" opacity="0.35"/>
+              <line x1="30" y1="78" x2="170" y2="78" opacity="0.35"/>
+              <circle cx="51" cy="33" r="2.4" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Inventory Management System</h3>
+            <p class="desc">Lightweight web app for stock control with low-stock alerts, vendor tracking, and CSV reports.</p>
+            <div class="chips"><span class="chip">html</span><span class="chip">tailwind</span><span class="chip">javascript</span><span class="chip">firebase</span></div>
+            <div class="project-cta">
+              <a class="link solid" href="https://rv2430.github.io/IMS/" target="_blank" rel="noopener">live demo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+              <a class="link" href="https://github.com/RV2430/IMS" target="_blank" rel="noopener">repo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="project reveal" data-d="1">
+          <div class="thumb">
+            <span class="tag">web app · live</span><span class="id">P-05</span>
+            <svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="26,84 56,68 86,76 116,46 146,54 176,30" />
+              <circle cx="56" cy="68" r="3" fill="currentColor"/><circle cx="116" cy="46" r="3" fill="currentColor"/><circle cx="176" cy="30" r="3" fill="currentColor"/>
+              <line x1="26" y1="100" x2="176" y2="100" opacity="0.4"/>
+              <line x1="26" y1="20" x2="26" y2="100" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <h3>Personal Expense Tracker</h3>
+            <p class="desc">Web-based tracker for logging expenses, categorizing spend, and visualizing insights with charts.</p>
+            <div class="chips"><span class="chip">html</span><span class="chip">tailwind</span><span class="chip">javascript</span><span class="chip">chart.js</span></div>
+            <div class="project-cta">
+              <a class="link solid" href="https://rv2430.github.io/" target="_blank" rel="noopener">live demo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+              <a class="link" href="https://github.com/RV2430/RV2430.github.io" target="_blank" rel="noopener">repo
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H3v7h2z"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section section--alt" data-screen-label="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="idx">04</span><span class="label">path</span><span class="rule"></span>
+      </div>
+
+      <div class="xp">
+        <!-- Education -->
+        <div class="reveal" data-d="1">
+          <h3><span class="b"></span> Education</h3>
+          <ol class="timeline">
+            <li class="tl">
+              <div class="when">nov 2025 — jul 2027</div>
+              <h4>Master of Information &amp; Communication Technology</h4>
+              <div class="org">University of Sunshine Coast · Adelaide, AU</div>
+              <ul><li>Python/SQL, Data Visualisation, Machine Learning, Business Analytics</li></ul>
+            </li>
+            <li class="tl dim">
+              <div class="when">jun 2020 — jul 2024</div>
+              <h4>B.Tech, Information Technology</h4>
+              <div class="org">UKA Tarsadia University · Bardoli, Gujarat</div>
+              <ul><li>Data Analysis, Cloud Technology, SQL &amp; Data Visualisation</li></ul>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Work -->
+        <div class="reveal" data-d="2">
+          <h3><span class="b alt"></span> Work Experience</h3>
+          <ol class="timeline">
+            <li class="tl">
+              <div class="when">apr 2026 — present</div>
+              <h4>Warehouse Pick Packer · Tip-Top Bakeries</h4>
+              <div class="org">Adelaide, SA · alongside full-time study</div>
+              <ul><li>Maintain accuracy and pace in a high-volume, deadline-driven warehouse environment.</li></ul>
+            </li>
+            <li class="tl">
+              <div class="when">nov 2025 — present</div>
+              <h4>Housekeeping Attendant · Stamford Plaza</h4>
+              <div class="org">Adelaide, SA · alongside full-time study</div>
+              <ul><li>Deliver consistent service quality in a fast-paced, guest-facing role.</li></ul>
+            </li>
+            <li class="tl dim">
+              <div class="when">oct 2024 — oct 2025</div>
+              <h4>IT Associate · Medh Systems</h4>
+              <div class="org">Mumbai, India · promoted from intern</div>
+              <ul>
+                <li>Kept network, hardware and backup systems at consistent uptime via proactive troubleshooting for internal stakeholders.</li>
+                <li>Maintained audit- and compliance-ready documentation and access logs across org-wide cloud storage tools.</li>
+              </ul>
+              <div class="tools"><b>tools:</b> ERP Software, cloud storage &amp; access tools</div>
+            </li>
+            <li class="tl dim">
+              <div class="when">jun 2024 — oct 2024</div>
+              <h4>ERP Developer Intern · Merciglobal Systems</h4>
+              <div class="org">Surat, India</div>
+              <ul>
+                <li>Built PersivX BI reporting adopted across multiple client accounts and used directly by client senior leadership for operational decisions.</li>
+                <li>Cut data errors across Jobwork, Sales, Dispatch &amp; Invoicing by testing, debugging and customising ERP modules with client stakeholders.</li>
+              </ul>
+              <div class="tools"><b>tools:</b> PersivX, PHP, SQL, JavaScript, HTML, CSS</div>
+            </li>
+            <li class="tl dim">
+              <div class="when">dec 2023 — may 2024</div>
+              <h4>AWS Associate Intern · Logictrix Infotech</h4>
+              <div class="org">Surat, India</div>
+              <ul>
+                <li>Provisioned 30 AWS resources (VPC, ALB, ECS, EC2) in a single run via a GitLab CI/CD + Terraform pipeline.</li>
+                <li>Reduced deployment risk with a two-stage non-prod→prod workflow and least-privilege IAM across three access tiers.</li>
+              </ul>
+              <div class="tools"><b>tools:</b> AWS, GitLab CI/CD, Terraform, Docker, CloudWatch</div>
+            </li>
+            <li class="tl dim">
+              <div class="when">may 2023 — jun 2023</div>
+              <h4>Web Developer Intern · Toshal Infotech</h4>
+              <div class="org">Surat, India</div>
+              <ul><li>Shipped responsive website templates signed off with 100% senior-developer approval — no revisions.</li></ul>
+              <div class="tools"><b>tools:</b> HTML, CSS, Bootstrap, SASS</div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section" data-screen-label="contact">
+    <div class="wrap contact-grid contact">
+      <div class="reveal">
+        <div class="eyebrow">05 / contact</div>
+        <h2>Let's build something measurable.</h2>
+        <p class="sub">Open to Data &amp; ICT roles in Adelaide and remote collaboration. Reach out anytime — I'd love to connect.</p>
+      </div>
+
+      <div class="terminal reveal" data-d="1">
+        <div class="terminal-bar">
+          <span class="tdots"><span></span><span></span><span></span></span>
+          rudra@adelaide ~ %
+        </div>
+        <div class="terminal-body">
+          <a class="tline" href="mailto:rudravashi48@gmail.com">
+            <span class="key">email</span><span class="val">rudravashi48@gmail.com</span><span class="go">→</span>
+          </a>
+          <a class="tline" href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" rel="noopener">
+            <span class="key">linkedin</span><span class="val">in/rudra-v-9a6237222</span><span class="go">↗</span>
+          </a>
+          <a class="tline" href="https://github.com/RV2430" target="_blank" rel="noopener">
+            <span class="key">github</span><span class="val">github.com/RV2430</span><span class="go">↗</span>
+          </a>
+          <a class="tline" href="assets/Rudra_Vashi_Resume.pdf" download="Rudra_Vashi_Resume.pdf">
+            <span class="key">resume</span><span class="val">Rudra_Vashi_Resume.pdf</span><span class="go">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <span>© <span id="year"></span> Rudra Vashi · Adelaide, AU</span>
+      <span class="links">
+        <a href="https://github.com/RV2430" target="_blank" rel="noopener">github</a>
+        <a href="https://www.linkedin.com/in/rudra-v-9a6237222" target="_blank" rel="noopener">linkedin</a>
+        <a href="mailto:rudravashi48@gmail.com">email</a>
+      </span>
+      <span>build · v2 / technical</span>
     </div>
   </footer>
 
-  <!-- Scripts: theme, menu, reveal, form -->
-  <script>
-    // Theme
-    const themeBtn = document.getElementById('theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    const setTheme = (force) => {
-      if (force) {
-        document.documentElement.classList.toggle('dark', force === 'dark');
-        localStorage.theme = force;
-      } else {
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && prefersDark.matches)) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      }
-    };
-    setTheme();
-    themeBtn?.addEventListener('click', () => {
-      const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-      setTheme(next);
-    });
+  <!-- ============ CURSOR HUD ============ -->
+  <div id="hud" class="hud" aria-hidden="true">
+    <div class="dotc"></div>
+    <div class="ring"></div>
+  </div>
 
-    // Mobile menu
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn?.addEventListener('click', () => {
-      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('hidden');
-    });
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') { mobileMenu?.classList.add('hidden'); menuBtn?.setAttribute('aria-expanded','false'); }
-    });
-
-    // Scroll reveal
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
